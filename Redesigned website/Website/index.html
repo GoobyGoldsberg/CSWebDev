@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Craigslist - Dublin</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/js/all.min.js"></script>
+
+    <style>
+        #mobile-menu {
+            display: none;
+        }
+
+        .mobile-menu-open #mobile-menu {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+
+    <nav class="bg-gray-800 p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-white flex items-center">
+                <img src="ireland.png" alt="Logo" class="h-8 w-8 mr-2"> Craigslist - Dublin
+            </a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="index.html" class="hover:text-indigo-400 transition duration-300">Home</a>
+                <a href="about.html" class="hover:text-indigo-400 transition duration-300">About</a>
+                <a href="listings.html" class="hover:text-indigo-400 transition duration-300">Listings</a>
+                <a href="contact.html" class="hover:text-indigo-400 transition duration-300">Contact</a>
+            </div>
+            <div class="hidden md:flex space-x-4 items-center">
+                <a href="#" class="hover:text-indigo-400 transition duration-300 flex items-center">
+                    <i class="fas fa-user mr-2"></i> Login
+                </a>
+                <a href="#" class="bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded-lg flex items-center transition duration-300">
+                    <i class="fas fa-plus mr-2"></i> Post an ad
+                </a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-400 focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden">
+            <a href="index.html" class="block px-4 py-2 hover:bg-gray-700">Home</a>
+            <a href="about.html" class="block px-4 py-2 hover:bg-gray-700">About</a>
+            <a href="listings.html" class="block px-4 py-2 hover:bg-gray-700">Listings</a>
+            <a href="contact.html" class="block px-4 py-2 hover:bg-gray-700">Contact</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-700">Login</a>
+            <a href="#" class="block px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-white">Post an ad</a>
+        </div>
+    </nav>
+
+    <section class="bg-gray-700 p-8 md:p-20 text-center">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Find Your Perfect <span class="text-indigo-400">Listing</span></h1>
+        <p class="text-lg md:text-xl mb-8">Explore a wide range of listings right here. Find everything from apartments to electronics.</p>
+        <a href="listings.html" class="bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-6 rounded-lg">Get Started</a>
+    </section>
+
+    <section class="container mx-auto py-12">
+        <h2 class="text-3xl font-bold text-center mb-10">Latest Listings</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold mb-4">Apartment in Dublin</h3>
+                <p class="mb-4">A beautiful apartment located in the heart of the city. Close to all amenities.</p>
+                <a href="#" class="text-indigo-400 hover:underline">Read more</a>
+            </div>
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold mb-4">Second-Hand Electronics</h3>
+                <p class="mb-4">Find great deals on used electronics. Laptops, phones, and more.</p>
+                <a href="#" class="text-indigo-400 hover:underline">Read more</a>
+            </div>
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold mb-4">Car Sales</h3>
+                <p class="mb-4">Browse our selection of cars for sale. New and used cars available.</p>
+                <a href="#" class="text-indigo-400 hover:underline">Read more</a>
+            </div>
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold mb-4">Furniture & Decor</h3>
+                <p class="mb-4">Stylish furniture and decor to enhance your living space. Check out our latest deals.</p>
+                <a href="#" class="text-indigo-400 hover:underline">Read more</a>
+            </div>
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold mb-4">Jobs in Dublin</h3>
+                <p class="mb-4">Looking for a job? Explore the latest job listings in Dublin across various industries.</p>
+                <a href="#" class="text-indigo-400 hover:underline">Read more</a>
+            </div>
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold mb-4">Community Events</h3>
+                <p class="mb-4">Join the upcoming events in your community. Meet new people and have fun!</p>
+                <a href="#" class="text-indigo-400 hover:underline">Read more</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-gray-800 py-12">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-indigo-400">Help & Safety</h2>
+            <p class="text-lg md:text-xl mb-8 text-gray-300">Stay safe and informed while using Craigslist. Here are some important resources to help you.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                <div class="bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-question-circle text-indigo-400 text-3xl mr-4"></i>
+                        <h3 class="text-2xl font-bold text-white">FAQ & Legal</h3>
+                    </div>
+                    <p class="text-gray-300 mb-4">Find answers to frequently asked questions, legal resources, and more to help you navigate safely.</p>
+                    <a href="#" class="bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded-lg flex items-center transition duration-300">
+                        <i class="fas fa-arrow-right mr-2"></i> Learn More
+                    </a>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-exclamation-triangle text-indigo-400 text-3xl mr-4"></i>
+                        <h3 class="text-2xl font-bold text-white">Avoid Scams & Fraud</h3>
+                    </div>
+                    <p class="text-gray-300 mb-4">Learn how to spot scams and fraudulent activities to protect yourself and your transactions online.</p>
+                    <a href="#" class="bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded-lg flex items-center transition duration-300">
+                        <i class="fas fa-arrow-right mr-2"></i> Learn More
+                    </a>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-shield-alt text-indigo-400 text-3xl mr-4"></i>
+                        <h3 class="text-2xl font-bold text-white">Personal Safety Tips</h3>
+                    </div>
+                    <p class="text-gray-300 mb-4">Get tips on staying safe when meeting people in person, dealing with transactions, and more.</p>
+                    <a href="#" class="bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded-lg flex items-center transition duration-300">
+                        <i class="fas fa-arrow-right mr-2"></i> Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-gray-900 py-12">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-indigo-400 mb-4">Try the Official Craigslist Mobile App</h2>
+            <p class="text-lg md:text-xl text-gray-300 mb-8">Get the Craigslist app for iOS and Android to browse and post ads on the go.</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#" class="bg-indigo-500 hover:bg-indigo-600 text-white py-3 px-6 rounded-lg flex items-center transition duration-300">
+                    <i class="fab fa-android mr-2"></i> Download for Android
+                </a>
+                <a href="#" class="bg-indigo-500 hover:bg-indigo-600 text-white py-3 px-6 rounded-lg flex items-center transition duration-300">
+                    <i class="fab fa-apple mr-2"></i> Download for iOS
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-gray-800 py-12">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-indigo-400 mb-8">Find Us in Dublin</h2>
+            <p class="text-lg md:text-xl text-gray-300 mb-8">Visit our location in Dublin. Use the map below to find us.</p>
+            <div class="flex justify-center">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.6931576794483!2d-6.260311184148808!3d53.349805479979434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e9c6a1a0e2f%3A0x4df4e20f3e7a0fa!2sDublin!5e0!3m2!1sen!2sie!4v1629789471234!5m2!1sen!2sie"
+                    width="100%" height="450" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+	<footer class="bg-gray-800 pt-8">
+		<div class="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+			<div>
+				<h4 class="text-xl font-bold mb-4">Help</h4>
+				<ul>
+					<li><a href="#" class="hover:text-gray-400">Safety</a></li>
+					<li><a href="#" class="hover:text-gray-400">Privacy</a></li>
+					<li><a href="#" class="hover:text-gray-400">Terms</a></li>
+					<li><a href="#" class="hover:text-gray-400">About</a></li>
+				</ul>
+			</div>
+			<div>
+				<h4 class="text-xl font-bold mb-4">Community</h4>
+				<ul>
+					<li><a href="#" class="hover:text-gray-400">Support</a></li>
+					<li><a href="#" class="hover:text-gray-400">Discussions</a></li>
+					<li><a href="#" class="hover:text-gray-400">Events</a></li>
+				</ul>
+			</div>
+			<div>
+				<h4 class="text-xl font-bold mb-4">Contact Us</h4>
+				<ul>
+					<li><a href="#" class="hover:text-gray-400">Contact Support</a></li>
+					<li><a href="#" class="hover:text-gray-400">Advertise</a></li>
+					<li><a href="#" class="hover:text-gray-400">Press</a></li>
+				</ul>
+			</div>
+			<div>
+				<h4 class="text-xl font-bold mb-4">Resources</h4>
+				<ul>
+					<li><a href="#" class="hover:text-gray-400">Blog</a></li>
+					<li><a href="#" class="hover:text-gray-400">Developers</a></li>
+					<li><a href="#" class="hover:text-gray-400">API</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="bg-gray-900 mt-8 py-4">
+			<div class="container mx-auto text-center">
+				<p>&copy; 2024 Craigslist. All rights reserved.</p>
+                <p>Redisign made by: Pawel Stroka</p>
+			</div>
+		</div>
+	</footer>
+
+
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.body.classList.toggle('mobile-menu-open');
+        });
+    </script>
+
+</body>
+</html>

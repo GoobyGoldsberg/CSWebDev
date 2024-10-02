@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listings - Craigslist Dublin</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/js/all.min.js"></script>
+
+    <style>
+        #mobile-menu {
+            display: none;
+        }
+
+        .mobile-menu-open #mobile-menu {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+
+    <nav class="bg-gray-800 p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-white flex items-center">
+                <img src="ireland.png" alt="Logo" class="h-8 w-8 mr-2"> Craigslist - Dublin
+            </a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="index.html" class="hover:text-indigo-400 transition duration-300">Home</a>
+                <a href="about.html" class="hover:text-indigo-400 transition duration-300">About</a>
+                <a href="listings.html" class="hover:text-indigo-400 transition duration-300">Listings</a>
+                <a href="contact.html" class="hover:text-indigo-400 transition duration-300">Contact</a>
+            </div>
+            <div class="hidden md:flex space-x-4 items-center">
+                <a href="#" class="hover:text-indigo-400 transition duration-300 flex items-center">
+                    <i class="fas fa-user mr-2"></i> Login
+                </a>
+                <a href="#" class="bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded-lg flex items-center transition duration-300">
+                    <i class="fas fa-plus mr-2"></i> Post an ad
+                </a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-400 focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden">
+            <a href="index.html" class="block px-4 py-2 hover:bg-gray-700">Home</a>
+            <a href="about.html" class="block px-4 py-2 hover:bg-gray-700">About</a>
+            <a href="listings.html" class="block px-4 py-2 hover:bg-gray-700">Listings</a>
+            <a href="contact.html" class="block px-4 py-2 hover:bg-gray-700">Contact</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-700">Login</a>
+            <a href="#" class="block px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-white">Post an ad</a>
+        </div>
+    </nav>
+
+    <section class="bg-gray-900 py-8">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Search Craigslist Listings</h2>
+            <p class="text-lg md:text-xl mb-8">Find exactly what you're looking for across all categories.</p>
+            <div class="flex justify-center items-center max-w-lg mx-auto">
+                <input type="text" placeholder="Search for listings..." class="w-full px-4 py-2 bg-gray-800 text-gray-100 placeholder-gray-500 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+                <button class="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-r-lg flex items-center transition duration-300">
+                    <i class="fas fa-search mr-2"></i> Search
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-gray-900 py-8">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-indigo-400 mb-8">Explore Listings by Category</h1>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg flex flex-col justify-between">
+                    <div>
+                        <h2 class="text-xl font-bold text-indigo-400 mb-4">Community</h2>
+                        <ul class="text-gray-300 space-y-2">
+                            <li><a href="#" class="hover:underline">Activities</a></li>
+                            <li><a href="#" class="hover:underline">Artists</a></li>
+                            <li><a href="#" class="hover:underline">Car Pools</a></li>
+                            <li><a href="#" class="hover:underline">Childcare</a></li>
+                            <li><a href="#" class="hover:underline">Classes</a></li>
+                            <li><a href="#" class="hover:underline">Events</a></li>
+                            <li><a href="#" class="hover:underline">Groups</a></li>
+                            <li class="extra-items hidden"><a href="#" class="hover:underline">Childcare</a></li>
+                            <li class="extra-items hidden"><a href="#" class="hover:underline">Classes</a></li>
+                            <li class="extra-items hidden"><a href="#" class="hover:underline">Events</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-4">
+                        <button class="toggle-button bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded-lg transition duration-300 inline-flex items-center">
+                            <i class="fas fa-chevron-right mr-2"></i> Show More
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg flex flex-col justify-between">
+                    <div>
+                        <h2 class="text-xl font-bold text-indigo-400 mb-4">Housing</h2>
+                        <ul class="text-gray-300 space-y-2">
+                            <li><a href="#" class="hover:underline">Flats/Housing</a></li>
+                            <li><a href="#" class="hover:underline">Holiday Rentals</a></li>
+                            <li><a href="#" class="hover:underline">Housing Swap</a></li>
+                            <li><a href="#" class="hover:underline">Office/Commercial</a></li>
+                            <li><a href="#" class="hover:underline">Parking/Storage</a></li>
+                            <li><a href="#" class="hover:underline">Rooms/Shared</a></li>
+                            <li><a href="#" class="hover:underline">Sub-lets/Temporary</a></li>
+                            <li class="extra-items hidden"><a href="#" class="hover:underline">Office/Commercial</a></li>
+                            <li class="extra-items hidden"><a href="#" class="hover:underline">Parking/Storage</a></li>
+                            <li class="extra-items hidden"><a href="#" class="hover:underline">Rooms/Shared</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-4">
+                        <button class="toggle-button bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded-lg transition duration-300 inline-flex items-center">
+                            <i class="fas fa-chevron-right mr-2"></i> Show More
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg flex flex-col justify-between">
+                    <div>
+                        <h2 class="text-xl font-bold text-indigo-400 mb-4">Jobs</h2>
+                        <ul class="text-gray-300 space-y-2">
+                            <li><a href="#" class="hover:underline">Accounting/Finance</a></li>
+                            <li><a href="#" class="hover:underline">Admin/Office</a></li>
+                            <li><a href="#" class="hover:underline">Art/Media/Design</a></li>
+                            <li><a href="#" class="hover:underline">Customer Services</a></li>
+                            <li><a href="#" class="hover:underline">Education</a></li>
+                            <li><a href="#" class="hover:underline">General Labour</a></li>
+                            <li><a href="#" class="hover:underline">Retail/Wholesale</a></li>
+                            <li class="extra-items hidden"><a href="#" class="hover:underline">Customer Services</a></li>
+                            <li class="extra-items hidden"><a href="#" class="hover:underline">Education</a></li>
+                            <li class="extra-items hidden"><a href="#" class="hover:underline">General Labour</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-4">
+                        <button class="toggle-button bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded-lg transition duration-300 inline-flex items-center">
+                            <i class="fas fa-chevron-right mr-2"></i> Show More
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg flex flex-col justify-between">
+                    <div>
+                        <h2 class="text-xl font-bold text-indigo-400 mb-4">Services</h2>
+                        <ul class="text-gray-300 space-y-2">
+                            <li><a href="#" class="hover:underline">Beauty</a></li>
+                            <li><a href="#" class="hover:underline">Computer</a></li>
+                            <li><a href="#" class="hover:underline">Cycle</a></li>
+                            <li><a href="#" class="hover:underline">Farm+Garden</a></li>
+                            <li><a href="#" class="hover:underline">Financial</a></li>
+                            <li><a href="#" class="hover:underline">Legal</a></li>
+                            <li><a href="#" class="hover:underline">Household</a></li>
+                            <li class="extra-items hidden"><a href="#" class="hover:underline">Farm+Garden</a></li>
+                            <li class="extra-items hidden"><a href="#" class="hover:underline">Financial</a></li>
+                            <li class="extra-items hidden"><a href="#" class="hover:underline">Legal</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-4">
+                        <button class="toggle-button bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded-lg transition duration-300 inline-flex items-center">
+                            <i class="fas fa-chevron-right mr-2"></i> Show More
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg flex flex-col justify-between">
+                    <div>
+                        <h2 class="text-xl font-bold text-indigo-400 mb-4">For Sale</h2>
+                        <ul class="text-gray-300 space-y-2">
+                            <li><a href="#" class="hover:underline">Antiques</a></li>
+                            <li><a href="#" class="hover:underline">Appliances</a></li>
+                            <li><a href="#" class="hover:underline">Auto Parts</a></li>
+                            <li><a href="#" class="hover:underline">Furniture</a></li>
+                            <li><a href="#" class="hover:underline">Household</a></li>
+                            <li><a href="#" class="hover:underline">Jewellery</a></li>
+                            <li><a href="#" class="hover:underline">Materials</a></li>
+                            <li class="extra-items hidden"><a href="#" class="hover:underline">Furniture</a></li>
+                            <li class="extra-items hidden"><a href="#" class="hover:underline">Household</a></li>
+                            <li class="extra-items hidden"><a href="#" class="hover:underline">Jewellery</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-4">
+                        <button class="toggle-button bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded-lg transition duration-300 inline-flex items-center">
+                            <i class="fas fa-chevron-right mr-2"></i> Show More
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg flex flex-col justify-between">
+                    <div>
+                        <h2 class="text-xl font-bold text-indigo-400 mb-4">Discussion Forums</h2>
+                        <ul class="text-gray-300 space-y-2">
+                            <li><a href="#" class="hover:underline">Apple</a></li>
+                            <li><a href="#" class="hover:underline">Arts</a></li>
+                            <li><a href="#" class="hover:underline">Autos</a></li>
+                            <li><a href="#" class="hover:underline">Beauty</a></li>
+                            <li><a href="#" class="hover:underline">Celebs</a></li>
+                            <li><a href="#" class="hover:underline">History</a></li>
+                            <li><a href="#" class="hover:underline">Music</a></li>
+                            <li class="extra-items hidden"><a href="#" class="hover:underline">Beauty</a></li>
+                            <li class="extra-items hidden"><a href="#" class="hover:underline">Celebs</a></li>
+                            <li class="extra-items hidden"><a href="#" class="hover:underline">History</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-4">
+                        <button class="toggle-button bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded-lg transition duration-300 inline-flex items-center">
+                            <i class="fas fa-chevron-right mr-2"></i> Show More
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 pt-8">
+        <div class="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div>
+                <h4 class="text-xl font-bold mb-4">Help</h4>
+                <ul>
+                    <li><a href="#" class="hover:text-gray-400">Safety</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Privacy</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Terms</a></li>
+                    <li><a href="#" class="hover:text-gray-400">About</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-xl font-bold mb-4">Community</h4>
+                <ul>
+                    <li><a href="#" class="hover:text-gray-400">Support</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Discussions</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Events</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-xl font-bold mb-4">Contact Us</h4>
+                <ul>
+                    <li><a href="#" class="hover:text-gray-400">Contact Support</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Advertise</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Press</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-xl font-bold mb-4">Resources</h4>
+                <ul>
+                    <li><a href="#" class="hover:text-gray-400">Blog</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Developers</a></li>
+                    <li><a href="#" class="hover:text-gray-400">API</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bg-gray-900 mt-8 py-4">
+            <div class="container mx-auto text-center">
+                <p>&copy; 2024 Craigslist. All rights reserved.</p>
+                <p>Redisign made by: Pawel Stroka</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.body.classList.toggle('mobile-menu-open');
+        });
+    </script>
+
+    <script>
+        document.querySelectorAll('.toggle-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const parentDiv = this.closest('.flex.flex-col.justify-between');
+                const extraItems = parentDiv.querySelectorAll('.extra-items');
+                extraItems.forEach(item => item.classList.toggle('hidden'));
+                if (this.innerText.trim() === 'Show More') {
+                    this.innerHTML = '<i class="fas fa-chevron-up mr-2"></i> Hide';
+                } else {
+                    this.innerHTML = '<i class="fas fa-chevron-right mr-2"></i> Show More';
+                }
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

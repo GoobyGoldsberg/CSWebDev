@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Craigslist Dublin</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/js/all.min.js"></script>
+
+    <style>
+        #mobile-menu {
+            display: none;
+        }
+
+        .mobile-menu-open #mobile-menu {
+            display: block;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .collapsible-content {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+
+    <nav class="bg-gray-800 p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-white flex items-center">
+                <img src="ireland.png" alt="Logo" class="h-8 w-8 mr-2"> Craigslist - Dublin
+            </a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="index.html" class="hover:text-indigo-400 transition duration-300">Home</a>
+                <a href="about.html" class="hover:text-indigo-400 transition duration-300">About</a>
+                <a href="listings.html" class="hover:text-indigo-400 transition duration-300">Listings</a>
+                <a href="contact.html" class="hover:text-indigo-400 transition duration-300">Contact</a>
+            </div>
+            <div class="hidden md:flex space-x-4 items-center">
+                <a href="#" class="hover:text-indigo-400 transition duration-300 flex items-center">
+                    <i class="fas fa-user mr-2"></i> Login
+                </a>
+                <a href="#" class="bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded-lg flex items-center transition duration-300">
+                    <i class="fas fa-plus mr-2"></i> Post an ad
+                </a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-400 focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden">
+            <a href="index.html" class="block px-4 py-2 hover:bg-gray-700">Home</a>
+            <a href="about.html" class="block px-4 py-2 hover:bg-gray-700">About</a>
+            <a href="listings.html" class="block px-4 py-2 hover:bg-gray-700">Listings</a>
+            <a href="contact.html" class="block px-4 py-2 hover:bg-gray-700">Contact</a>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-700">Login</a>
+            <a href="#" class="block px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-white">Post an ad</a>
+        </div>
+    </nav>
+
+    <section class="bg-gray-900 py-12">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-indigo-400 mb-8">Contact Us</h1>
+            <p class="text-lg md:text-xl text-gray-300 mb-8">We're here to help. Please select the appropriate contact type below and provide your details.</p>
+            
+            <div class="mb-8">
+                <label for="contact-type" class="block text-lg font-bold mb-2">Select Contact Type:</label>
+                <select id="contact-type" class="w-full md:w-1/2 mx-auto p-3 bg-gray-800 text-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <option value="General Inquiries">General Inquiries</option>
+                    <option value="Technical Support">Technical Support</option>
+                    <option value="Paid Postings">Paid Postings</option>
+                    <option value="Scams, Spam, Flagging">Scams, Spam, Flagging</option>
+                    <option value="Phone Verification">Phone Verification</option>
+                    <option value="Personal Harassment">Personal Harassment</option>
+                    <option value="Suggestions / Feedback">Suggestions / Feedback</option>
+                    <option value="Press & Media">Press & Media</option>
+                    <option value="Law Enforcement, Legal">Law Enforcement, Legal</option>
+                    <option value="Security">Security</option>
+                    <option value="Download or Delete My Data">Download or Delete My Data</option>
+                </select>
+            </div>
+
+            <div class="mb-8">
+                <div class="flex justify-center space-x-4 mb-4">
+                    <button class="tab-button bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded-lg transition duration-300 active" data-tab="tab-1">General Inquiries</button>
+                    <button class="tab-button bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded-lg transition duration-300" data-tab="tab-2">Technical Support</button>
+                </div>
+                <div id="tab-1" class="tab-content active p-6 bg-gray-800 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold text-indigo-400 mb-4">General Inquiries</h2>
+                    <p class="text-gray-300 mb-4">Please fill out the contact form below with as much detail as possible.</p>
+                    <form>
+                        <div class="mb-4">
+                            <input type="text" placeholder="Your Name" class="w-full p-3 bg-gray-700 text-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                        </div>
+                        <div class="mb-4">
+                            <input type="email" placeholder="Your Email" class="w-full p-3 bg-gray-700 text-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                        </div>
+                        <div class="mb-4">
+                            <input type="text" id="contact-type-input" name="contact-type" class="hidden">
+                        </div>
+                        <div class="mb-4">
+                            <textarea placeholder="Your Message" class="w-full p-3 bg-gray-700 text-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-6 rounded-lg transition duration-300">Submit</button>
+                    </form>
+                </div>
+                <div id="tab-2" class="tab-content p-6 bg-gray-800 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold text-indigo-400 mb-4">Technical Support</h2>
+                    <p class="text-gray-300 mb-4">If you are experiencing technical issues, please describe the problem in detail below.</p>
+                    <form>
+                        <div class="mb-4">
+                            <input type="text" placeholder="Your Name" class="w-full p-3 bg-gray-700 text-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                        </div>
+                        <div class="mb-4">
+                            <input type="email" placeholder="Your Email" class="w-full p-3 bg-gray-700 text-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                        </div>
+                        <div class="mb-4">
+                            <input type="text" id="contact-type-input" name="contact-type" class="hidden">
+                        </div>
+                        <div class="mb-4">
+                            <textarea placeholder="Describe the Issue" class="w-full p-3 bg-gray-700 text-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-6 rounded-lg transition duration-300">Submit</button>
+                    </form>
+                </div>
+            </div>            
+        </div>
+    </section>
+
+
+    <section class="bg-gray-900">
+        <div class="container mx-auto text-center mb-12">
+            <h2 class="text-2xl font-bold text-indigo-400 mb-4">FAQs</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <button class="collapsible-button text-left w-full bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded-lg transition duration-300 flex items-center">
+                        <i class="fas fa-question-circle mr-2"></i> How do I post an ad?
+                    </button>
+                    <div class="collapsible-content p-4 bg-gray-700 mt-2 rounded-lg">
+                        <p class="text-gray-300">To post an ad on Craigslist, click the "Post an ad" button at the top right of the homepage, select the appropriate category, and fill in the required details. Your ad will be reviewed and posted within a few minutes.</p>
+                    </div>
+                </div>
+        
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <button class="collapsible-button text-left w-full bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded-lg transition duration-300 flex items-center">
+                        <i class="fas fa-headset mr-2"></i> How do I contact support?
+                    </button>
+                    <div class="collapsible-content p-4 bg-gray-700 mt-2 rounded-lg">
+                        <p class="text-gray-300">You can contact our support team by selecting "Technical Support" from the contact type dropdown above and filling out the form. We aim to respond to all inquiries within 24 hours.</p>
+                    </div>
+                </div>
+        
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <button class="collapsible-button text-left w-full bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded-lg transition duration-300 flex items-center">
+                        <i class="fas fa-user-shield mr-2"></i> How do I avoid scams?
+                    </button>
+                    <div class="collapsible-content p-4 bg-gray-700 mt-2 rounded-lg">
+                        <p class="text-gray-300">Always deal locally, meet in public places, and avoid sharing personal or financial information. For more tips, visit our safety page.</p>
+                    </div>
+                </div>
+        
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                    <button class="collapsible-button text-left w-full bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded-lg transition duration-300 flex items-center">
+                        <i class="fas fa-lock mr-2"></i> How do I secure my account?
+                    </button>
+                    <div class="collapsible-content p-4 bg-gray-700 mt-2 rounded-lg">
+                        <p class="text-gray-300">Ensure your password is strong and unique. Enable two-factor authentication for an added layer of security.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 pt-8">
+        <div class="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div>
+                <h4 class="text-xl font-bold mb-4">Help</h4>
+                <ul>
+                    <li><a href="#" class="hover:text-gray-400">Safety</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Privacy</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Terms</a></li>
+                    <li><a href="#" class="hover:text-gray-400">About</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-xl font-bold mb-4">Community</h4>
+                <ul>
+                    <li><a href="#" class="hover:text-gray-400">Support</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Discussions</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Events</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-xl font-bold mb-4">Contact Us</h4>
+                <ul>
+                    <li><a href="#" class="hover:text-gray-400">Contact Support</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Advertise</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Press</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-xl font-bold mb-4">Resources</h4>
+                <ul>
+                    <li><a href="#" class="hover:text-gray-400">Blog</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Developers</a></li>
+                    <li><a href="#" class="hover:text-gray-400">API</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bg-gray-900 mt-8 py-4">
+            <div class="container mx-auto text-center">
+                <p>&copy; 2024 Craigslist. All rights reserved.</p>
+                <p>Redisign made by: Pawel Stroka</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.body.classList.toggle('mobile-menu-open');
+        });
+
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', function() {
+                document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+
+                // Hide tab contentsd
+                document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+                const tabId = this.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        document.querySelectorAll('.collapsible-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        });
+
+        document.getElementById('contact-type').addEventListener('change', function() {
+            document.querySelectorAll('#contact-type-input').forEach(input => {
+                input.value = this.value;
+            });
+        });
+
+        document.getElementById('contact-type').dispatchEvent(new Event('change'));
+    </script>
+
+</body>
+</html>
